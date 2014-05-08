@@ -73,7 +73,7 @@ button {
   .Table .CellVAlignTop {
     vertical-align: top; }
   .Table .CellVAlignBottom {
-    bottom: 180px;
+    bottom: 150px;
     position: absolute; }
 
 .scoreboard-table {
