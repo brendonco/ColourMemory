@@ -1,0 +1,18 @@
+@mixin button-layout{
+	background-color: #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+     border:none;
+    width: 200px;
+    height: 50px;
+}
+
+button{
+	@include button-layout;
+}
+

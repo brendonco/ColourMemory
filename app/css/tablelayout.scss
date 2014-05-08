@@ -1,0 +1,53 @@
+.Table
+{
+    display: table;
+    background-color: #778899;
+
+    width: 720px;
+    height:576px;
+
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+        display: table-cell;
+        /* border: solid; */
+        border-width: thin;
+        padding: 40px 20px 40px 20px;
+    }
+
+    .CellVAlignTop{
+        vertical-align:top;
+    }
+
+    .CellVAlignBottom{
+        bottom: 180px;
+        position: absolute;
+    }
+}
+
+.scoreboard-table{
+    @include border-layout(1px, black);
+    width:80%;
+
+    tr,td{
+        @include border-layout(1px, black);
+    }
+}
+
+

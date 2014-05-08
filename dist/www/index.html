@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="lib/angular.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body key-handler>
+    <div ng-controller="MainCtrl">
+    <div class="Table">
+        <div class="Row">
+            <div class="Cell">
+                <card-board
+                      columns="4"
+                      lines="4"
+                      tiles-dir="./img/"
+                      tiles-src="tilesSrc"
+                      tile-width="80"
+                      tile-height="100">
+                  </card-board>
+            </div>
+              <div class="Cell CellVAlignTop">
+                  <div><img src="img/logo.png"></div>
+                  <div><button ng-click="showGameInfo()">Game Info</button></div>
+                  <div class="CellVAlignBottom"><button ng-click="restartBtn()">Restart</button></div>
+              </div>
+        </div>
+    </div>
+    <dialog ng-class="scoreboardWindow">
+          <h3>Hall of Fame</h3>
+          <table class="scoreboard-table">
+            <tr>
+              <td>Rank</td>
+              <td>Name</td>
+              <td>Score</td>
+            </tr>
+            <tr ng-repeat="rank in rankings" ng-class="highlightUser(rank.emailaddress)">
+              <td>{{rank.ranks}}</td>
+              <td>{{rank.name}}</td>
+              <td>{{rank.score}}</td>
+            </tr>
+          </table>
+    </dialog>
+
+    <dialog ng-class="userInfoWindow">
+      <h2>Please enter your Name and Email Address.</h2>
+      <div>
+          <span class="">Your score: {{score}}</span><br><br>
+          <span>Name: <input type="text" ng-model="name"/></span>
+          <span>Email Address: <input type="text" ng-model="emailaddress"/></span><br><br>
+          <span><button ng-click="addUser()">Submit</button>
+      </div>
+    </dialog>
+
+  </div>
+  </body>
+</html>

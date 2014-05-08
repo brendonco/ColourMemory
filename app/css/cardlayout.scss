@@ -1,0 +1,47 @@
+.memory-game {
+    td {
+      @include border-layout (0, #CCCCCC);
+    }
+
+    .card {
+      cursor: pointer;
+      position: relative;
+      line-height: 0;
+    }
+
+    .card-highlight {
+      @include border-layout (2px, red);
+    }
+
+    .back, .memory-game .front  {
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+    }
+
+    .back {
+      left: 0;
+      position: absolute;
+      top: 0;
+      @include rotate-x(0deg);
+    }
+
+    .front {
+      @include rotate-x(180deg);
+    }
+
+    .flipped .front {
+      @include rotate-x(0deg);
+    }
+
+    .flipped .back {
+      @include rotate-x(-180deg);
+    }
+
+    .card-removed {
+      opacity: 0;
+    }
+}

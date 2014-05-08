@@ -1,0 +1,16 @@
+$visible: block;
+$hidden: none;
+
+@mixin border-layout ($thickness, $color){
+	border: $thickness solid $color;
+}
+
+@mixin setVisible($visible-element){
+	display:$visible-element;
+}
+
+body{
+	width: 720px;
+	height: 576px;
+	border: 1px solid green;
+}

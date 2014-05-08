@@ -1,0 +1,207 @@
+body {
+  width: 720px;
+  height: 576px;
+  border: 1px solid green; }
+
+.memory-game td {
+  border: 0 solid #cccccc; }
+.memory-game .card {
+  cursor: pointer;
+  position: relative;
+  line-height: 0; }
+.memory-game .card-highlight {
+  border: 2px solid red; }
+.memory-game .back, .memory-game .memory-game .front {
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+.memory-game .back {
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg); }
+.memory-game .front {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg); }
+.memory-game .flipped .front {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg); }
+.memory-game .flipped .back {
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg); }
+.memory-game .card-removed {
+  opacity: 0; }
+
+button {
+  background-color: #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  width: 200px;
+  height: 50px; }
+
+.Table {
+  display: table;
+  background-color: #778899;
+  width: 720px;
+  height: 576px; }
+  .Table .Title {
+    display: table-caption;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger; }
+  .Table .Heading {
+    display: table-row;
+    font-weight: bold;
+    text-align: center; }
+  .Table .Row {
+    display: table-row; }
+  .Table .Cell {
+    display: table-cell;
+    /* border: solid; */
+    border-width: thin;
+    padding: 40px 20px 40px 20px; }
+  .Table .CellVAlignTop {
+    vertical-align: top; }
+  .Table .CellVAlignBottom {
+    bottom: 180px;
+    position: absolute; }
+
+.scoreboard-table {
+  border: 1px solid black;
+  width: 80%; }
+  .scoreboard-table tr, .scoreboard-table td {
+    border: 1px solid black; }
+
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80); }
+
+.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 8px solid orange;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto; }
+
+.close-btn {
+  float: right; }
+
+.scoreboard-white-content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 8px solid orange;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto; }
+
+.scoreboard-black-overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80); }
+
+.scoreboard-light-hide {
+  display: none; }
+
+.scoreboard-light-show {
+  display: block; }
+
+.scoreboard-fade-overlay-show {
+  display: block; }
+
+.scoreboard-fade-overlay-hide {
+  display: none; }
+
+.scoreboard-dialog-show {
+  display: block; }
+
+.scoreboard-dialog-hide {
+  display: none; }
+
+.userinfo-dialog-show {
+  display: block; }
+
+.userinfo-dialog-hide {
+  display: none; }
+
+.userinfo-white-content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 8px solid orange;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto; }
+
+.userinfo-black-overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80); }
+
+.userinfo-light-hide {
+  display: none; }
+
+.userinfo-light-show {
+  display: block; }
+
+.userinfo-fade-overlay-show {
+  display: block; }
+
+.userinfo-fade-overlay-hide {
+  display: none; }
+
+.userinfo-score {
+  font-size: 1em;
+  font-weight: bold; }
+
+.highlight-user td {
+  border: 3px solid red; }
