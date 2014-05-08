@@ -11,8 +11,6 @@ $name = $data["name"];
 $emailaddress = $data["emailaddress"];
 $score = $data["score"];
 
-echo $name . $emailaddress . $score;
-
 if($name && $emailaddress && $score){
 	updateUser($name, $emailaddress, $score);
 
