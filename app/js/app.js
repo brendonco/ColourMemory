@@ -33,6 +33,9 @@ app.controller('MainCtrl', ['$scope', '$rootScope','$location', function($scope,
 		$scope.columns = arg.columns;
 		$scope.unmatchedPairs = 0;
 
+		$scope.name = "";
+		$scope.emailaddress = "";
+
 		showUserInfo();
 
 		$scope.$broadcast("UserInfoEvent");

@@ -329,17 +329,22 @@ colourMemoryApp.controller('ColourMemoryGameCtrl', ['$scope', '$attrs', '$timeou
                 args.score =9999; //dummy score
             }
 
-            userInfoService.addUser(args, function(){
+            userInfoService.addUser(args, function(data){
               //hideUserInfo();
-              $rootScope.hideUserInfo();
 
-              $rootScope.restartGame();
+              if(data.error){
+                  alert("Please enter different name or email address.\n" + data.error);
+              }else{
+                $rootScope.hideUserInfo();
 
-              showGameInfo();
+                $rootScope.restartGame();
+
+                showGameInfo();
+              }
               
             },function(data){
                 //error when saving data.
-                alert("Error when saving data.");
+                alert("Error saving. Please check console for more information about the problem.");
                 console.log(data);
             });
         }

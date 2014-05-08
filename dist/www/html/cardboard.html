@@ -2,7 +2,7 @@
 	<tr ng-repeat="line in grid">
 		<td ng-repeat="tile in line" class="container" ng-class="{'card-highlight': (tile.row == focusRow && tile.col == focusCol)}">
 			<div ng-style="card_{{tile.row}}_{{tile.col}}">
-				<div class="card" ng-class="{flipped: tile.flipped}">
+				<div class="card" ng-class="{flipped: tile.flipped}" ng-click="flipTile(tile)">
 					<img class="front" ng-src="{{tilesDir}}{{tile.title}}" width="{{tileWidth}}" height="{{tileHeight}}">
 					<img class="back" ng-src="{{tilesDir}}card_bg.gif" width="{{tileWidth}}" height="{{tileHeight}}">
 				</div>

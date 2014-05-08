@@ -16,8 +16,6 @@ if($name && $emailaddress && $score){
 
 	header('Content-Type: application/json');
 
-
-	$updateUser = array(status => 200);
 	echo json_encode($updateUser);
 }
 
@@ -28,7 +26,15 @@ if($getscore){
 function updateUser($username, $emailadd, $score){
 	$conn = getConnection();
 
-	mysql_query("INSERT INTO USERINFO (name, emailaddress, score) VALUES ('$username', '$emailadd', '$score')");
+	$result = mysql_query("INSERT INTO USERINFO (name, emailaddress, score) VALUES ('$username', '$emailadd', '$score')");
+
+	if(!$result){
+		$error = array('error' => mysql_error());
+
+		header('Content-Type: application/json');
+
+		die(json_encode($error));
+	}
 
 	closeConnection($conn);
 }
