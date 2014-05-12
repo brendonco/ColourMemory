@@ -12,4 +12,7 @@ Before proceeding with the instructions below make sure that you've got node.js 
 
 ````
 npm install grunt-contrib-uglify --save-dev
+npm install grunt-contrib-copy --save-dev
+npm install grunt-contrib-clean --save-dev
+npm install grunt-contrib-concat --save-dev
 ````
