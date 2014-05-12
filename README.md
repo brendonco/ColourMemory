@@ -7,3 +7,9 @@ Before proceeding with the instructions below make sure that you've got node.js 
 * npm install
 * test your setup by running grunt
 ```
+
+#Dependency
+
+````
+npm install grunt-contrib-uglify --save-dev
+````
