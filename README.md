@@ -36,6 +36,10 @@ Refer to MySQL website on how to install
 
 http://dev.mysql.com/doc/refman/5.7/en/installing.html
 
+How to import SQL script.
+
+https://github.com/brendonco/ColourMemory/wiki
+
 #Demo
 
 As soon as your environment is set up you can see colour memory by:
