@@ -26,6 +26,16 @@ npm install grunt-contrib-concat --save-dev
 copy dist/www/* to apache-tomcat-xxx\webapps\colourmemory\
 ````
 
+#PHP installation
+Refer to PHP website on how to install
+
+http://sg3.php.net/manual/en/install.php
+
+#MySQL installation
+Refer to MySQL website on how to install
+
+http://dev.mysql.com/doc/refman/5.7/en/installing.html
+
 #Demo
 
 As soon as your environment is set up you can see colour memory by:
